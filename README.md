@@ -1,7 +1,7 @@
 # SCAMP-Assessment
 She Code Africa Mentorship Programme Assessment
 
-#Technology Used
+# Technology Used
 Node.js/Express
 
 MongoDB/Mongoose
