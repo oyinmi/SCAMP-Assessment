@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.json({ "message": "Congratulations, Aoi is working" });
+    res.json({ "message": "Congratulations, API is working" });
 });
 
 
@@ -28,7 +28,7 @@ app.use('/', route);
 
 
 // PORT ENVIRONMENT VARIABLE
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 7000;
 
 
 // Setting up the server
