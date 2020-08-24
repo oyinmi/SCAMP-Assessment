@@ -64,24 +64,13 @@ inventory.post(
 
             await inventory.save();
 
-            const payload = {
-                inventory: {
-                    id: inventory.id
-                }
-            };
-
-            jwt.sign(
-                payload,
-                "randomString", {
-                    expiresIn: 10000
-                },
-                (err, token) => {
-                    if (err) throw err;
-                    res.status(200).json({
-                        token
-                    });
-                }
-            );
+            inventory = await Inventory.findOne({
+                name
+            });
+            return res.status(200).json({
+                "status": "successful", 
+                 data: inventory 
+            });
             
         } catch (err) {
             console.log(err.message);
@@ -132,25 +121,14 @@ inventory.post(
                     message: "Item is not available."
                 });
                 
-            const payload = {
-                inventory: {
-                    id: inventory.id,
-                }
-            };
-
-            jwt.sign(
-                payload,
-                "randomString",
-                {
-                    expiresIn: 3600
-                },
-                (err, token) => {
-                    if (err) throw err;
-                    res.status(200).json({
-                        token
-                    });
-                }
-            );
+            inventory = await Inventory.findOne({
+                name
+            });
+            return res.status(200).json({
+                "status": "successful",
+                 data: inventory
+            });
+            
         } catch (err) {
             console.error(err);
             res.status(500).json({
