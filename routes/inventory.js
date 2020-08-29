@@ -81,7 +81,7 @@ inventory.post(
 
 
 /**
- * @method - POST
+ * @method - GET
  * @param - /view
  * @description - view Inventory
  */
