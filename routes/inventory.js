@@ -87,7 +87,7 @@ inventory.post(
  */
 
 // View Inventory
-inventory.post(
+inventory.get(
     "/saleperson/view",
     [
         check("name", "Please Enter a Valid Name")
